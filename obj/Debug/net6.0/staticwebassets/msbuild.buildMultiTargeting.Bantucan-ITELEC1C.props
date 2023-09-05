@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Bantucan-ITELEC1C.props" />
+</Project>

@@ -1,0 +1,23 @@
+﻿@page
+@{
+    var name = "Adrian S. Bantucan";
+    var email = "adrian.bantucan.cics@ust.edu.ph";
+    var age = 22;
+}
+
+<div class="about-container">
+    <img src="~/images/pic.jpg" alt="pic" class="profile-image">
+    <div class="overlay">
+        <img src="~/images/cloud.jpg" alt="Overlay Image" class="overlay-image">
+    <h1>About Me:</h1>
+    <p>
+        Hi! My name is <span class="highlight">@name</span> and I am <span class="highlight">@age</span> years old.
+    </p>
+    <p>
+        Currently studying at University of Santo Thomas. Taking the BSIT course.
+    </p>
+    <p>
+        You can reach me at <a href="mailto:@email">@email</a>.
+    </p>
+</div>
+</div>

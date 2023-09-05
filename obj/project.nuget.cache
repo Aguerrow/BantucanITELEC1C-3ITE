@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "TXP3C1DiAD6sCvUNdU05QLb2m+hTfchsGtZzt6e5vONVB9c6/BtBh2HA21riCTwaTh1QUHEilftfkpUrfn174A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Studylaptop\\source\\repos\\Bantucan-ITELEC1C\\Bantucan-ITELEC1C\\Bantucan-ITELEC1C.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Studylaptop\\.nuget\\packages\\microsoft.netcore.app.host.win-x86\\6.0.21\\microsoft.netcore.app.host.win-x86.6.0.21.nupkg.sha512"
+  ],
+  "logs": []
+}

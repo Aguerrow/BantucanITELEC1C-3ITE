@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+@{
+    DateTime date = DateTime.Now;
+
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome!</h1>
+
+        @{
+            DateTime now = DateTime.Now;
+            string timeOfDay = "";
+
+            if (now.Hour >= 5 && now.Hour < 12)
+            {
+                timeOfDay = "It is Morning";
+            }
+            else if (now.Hour >= 12 && now.Hour < 17)
+            {
+                timeOfDay = "It is Afternoon";
+            }
+            else
+            {
+                timeOfDay = "It is Night";
+            }
+
+            string dayOfWeek = now.DayOfWeek.ToString();
+            string dateOfMonth = now.Day.ToString();
+            string month = now.ToString("MMMM");
+        }
+
+    <p>@timeOfDay on @dayOfWeek, @dateOfMonth, @month.</p>
+    
+
+</div>
+
