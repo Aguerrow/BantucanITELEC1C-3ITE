@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Employee>
+
+<div>Employee List</div>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th colspan="7">Employee</th>
+        </tr>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Birth Date</th>
+            <th>Status</th>
+            <th>Daily Salary</th>
+            <th>Monthly Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.Id</td>
+                <td>@employee.FirstName @employee.LastName</td>
+                <td>@employee.Email</td>
+                <td>@employee.Birthday.ToShortDateString()</td>
+                <td>
+                    @if (employee.IsTenured)
+                    {
+                        <p>Permanent</p>
+                    }
+                    else
+                    {
+                        <p>Probationary</p>
+                    }
+                </td>
+                <td>@employee.SalaryPerHour * 8.00M</td>
+                <td>@(employee.SalaryPerHour * 8.00M * 30.00M)</td>
+                <td><a asp-action="ShowDetail" asp-route-id="@employee.Id">Show Details</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

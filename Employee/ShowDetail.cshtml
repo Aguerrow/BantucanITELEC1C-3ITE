@@ -1,0 +1,50 @@
+﻿@model Employee
+
+<h1>Employee Details</h1>
+
+<table class="table table-dark">
+    <tr>
+        <th>Id</th>
+        <td>@Model.Id</td>
+    </tr>
+    <tr>
+        <th>Last Name</th>
+        <td>@Model.LastName</td>
+    </tr>
+    <tr>
+        <th>First Name</th>
+        <td>@Model.FirstName</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>@Model.Email</td>
+    </tr>
+    <tr>
+        <th>Domain</th>
+        <td>@Model.Email.Split('@')[1]</td>
+    </tr>
+    <tr>
+        <th>Username</th>
+        <td>@Model.Email.Split('@')[0]</td>
+    </tr>
+    <tr>
+        <th>Birth Date</th>
+        <td>@Model.Birthday.ToShortDateString()</td>
+    </tr>
+    <tr>
+        <th>Age</th>
+        <td>I'm @Model.FirstName @Model.LastName and I'm @Model.Age yrs old</td>
+    </tr>
+    <tr>
+        <th>Status</th>
+        <td>@(Model.IsTenured ? "Permanent" : "Probationary")</td>
+    </tr>
+    <tr>
+        <th>Daily Salary</th>
+        <td>@(Model.SalaryPerHour * 8.00M)</td>
+    </tr>
+    <tr>
+        <th>Monthly Salary</th>
+        <td>@(Model.SalaryPerHour * 8.00M * 30.00M)</td>
+    </tr>
+</table>
